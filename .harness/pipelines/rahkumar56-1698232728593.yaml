@@ -29,4 +29,5 @@ pipeline:
             paths: []
         type: CI
   delegateSelectors:
-    - rahulk-delegate-nikaw
+    - perf-delegate
+    - kubernetes-delegate
