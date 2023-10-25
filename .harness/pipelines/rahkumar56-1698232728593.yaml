@@ -20,12 +20,13 @@ pipeline:
                   timeout: ""
                   type: Run
           platform:
-            arch: Amd64
             os: Linux
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
           caching:
             enabled: false
             paths: []
         type: CI
+  delegateSelectors:
+    - rahulk-delegate-nikaw
