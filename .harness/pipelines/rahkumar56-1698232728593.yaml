@@ -15,20 +15,22 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
+                    connectorRef: account.harnessImage
+                    image: alpine:latest
                     shell: Sh
                     command: echo hello world
                   timeout: ""
                   type: Run
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Cloud
-            spec: {}
           caching:
             enabled: false
             paths: []
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: rahulscaletest
+              namespace: rahul-scaletest
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
         type: CI
-  delegateSelectors:
-    - perf-delegate
-    - kubernetes-delegate
+  allowStageExecutions: true
