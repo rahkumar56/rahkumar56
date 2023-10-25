@@ -21,6 +21,7 @@ pipeline:
                   type: Run
           platform:
             os: Linux
+            arch: Amd64
           runtime:
             type: Cloud
             spec: {}
