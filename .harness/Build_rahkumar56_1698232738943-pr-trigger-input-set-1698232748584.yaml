@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_rahkumar56_1698232738943-pr-trigger-input-set
+  identifier: Build_rahkumar56_1698232738943prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Test_Log_Service_project
+  pipeline:
+    identifier: Build_rahkumar56_1698232738943
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
