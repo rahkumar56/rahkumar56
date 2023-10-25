@@ -3,18 +3,12 @@ pipeline:
   name: Build rahkumar56
   orgIdentifier: default
   projectIdentifier: Test_Log_Service_project
-  properties:
-    ci:
-      codebase:
-        build: <+input>
-        connectorRef: account.Github
-        repoName: rahkumar56/rahkumar56
   stages:
     - stage:
         identifier: build
         name: build
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           execution:
             steps:
               - step:
@@ -31,4 +25,7 @@ pipeline:
           runtime:
             spec: {}
             type: Cloud
+          caching:
+            enabled: false
+            paths: []
         type: CI
